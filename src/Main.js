@@ -4,6 +4,8 @@ import Card from './Card';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
+import { BsSearch } from 'react-icons/bs';
+
 
 const url= "https://example-data.draftbit.com/cars?_limit=20"
 
@@ -21,14 +23,14 @@ const Main = () => {
   return (
     <div>
         {/*<input type="text" onChange={(e) => setSearch(e.target.value)}/> */}
-        <InputGroup className="mb-3">
+        <InputGroup size="lg" className="mb-3" onChange={(e) => setSearch(e.target.value)}>
         <Form.Control
           placeholder="Recipient's username"
           aria-label="Recipient's username"
           aria-describedby="basic-addon2"
         />
-        <Button variant="outline-secondary" id="button-addon2">
-          Button
+        <Button variant="outline-secondary" id="button-addon2" >
+          <BsSearch />
         </Button>
       </InputGroup>
         {car.filter((item)=>{
