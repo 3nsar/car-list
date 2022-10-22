@@ -40,7 +40,7 @@ const Main = () => {
       </InputGroup>
     
       <Row >
-      <Col >
+     
         {car.filter((item)=>{
             return search.toLowerCase() ==="" ? item : item.make_id.toLowerCase().includes(search)
         }).map((item)=>(
@@ -51,7 +51,7 @@ const Main = () => {
             image = {item.image}
             />
         ))}
-        </Col>
+        
     </Row>
     </Container>
   )
