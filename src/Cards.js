@@ -1,4 +1,5 @@
 import React from 'react'
+import { Row, Col, Container } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
@@ -9,6 +10,9 @@ const Cards = (props) => {
         <h1>{props.model}</h1>
         <h1>{props.year}</h1>
     </div> */
+    <Container >
+    <Row >
+    <Col >
     <Card style={{ width: '18rem' }}>
       <Card.Img variant="top" src={props.image} />
       <Card.Body>
@@ -20,6 +24,10 @@ const Cards = (props) => {
         <Button variant="primary">Go somewhere</Button>
       </Card.Body>
     </Card>
+
+    </Col>
+    </Row>
+    </Container>
   )
 }
 

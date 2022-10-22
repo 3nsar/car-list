@@ -5,6 +5,11 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 import { BsSearch } from 'react-icons/bs';
+import Row from  'react-bootstrap/Row'
+import Col from  'react-bootstrap/Col'
+import { Container } from 'react-bootstrap';
+
+
 
 
 const url= "https://example-data.draftbit.com/cars?_limit=20"
@@ -21,7 +26,7 @@ const Main = () => {
         })
     }, [])
   return (
-    <div>
+    <Container >
         {/*<input type="text" onChange={(e) => setSearch(e.target.value)}/> */}
         <InputGroup size="lg" className="mb-3 mt-3 w-75"  onChange={(e) => setSearch(e.target.value)}>
         <Form.Control
@@ -33,6 +38,9 @@ const Main = () => {
           <BsSearch />
         </Button>
       </InputGroup>
+    
+      <Row >
+      <Col >
         {car.filter((item)=>{
             return search.toLowerCase() ==="" ? item : item.make_id.toLowerCase().includes(search)
         }).map((item)=>(
@@ -43,8 +51,9 @@ const Main = () => {
             image = {item.image}
             />
         ))}
-
-    </div>
+        </Col>
+    </Row>
+    </Container>
   )
 }
 
