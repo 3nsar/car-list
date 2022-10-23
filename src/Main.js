@@ -12,7 +12,7 @@ import { Container } from 'react-bootstrap';
 
 
 
-const url= "https://example-data.draftbit.com/cars?_limit=20"
+const url= "https://example-data.draftbit.com/cars?_limit=50"
 
 const Main = () => {
 
@@ -26,7 +26,7 @@ const Main = () => {
         })
     }, [])
   return (
-    <Container >
+    <Container>
         {/*<input type="text" onChange={(e) => setSearch(e.target.value)}/> */}
         <InputGroup size="lg" className="mb-3 mt-3 w-75"  onChange={(e) => setSearch(e.target.value)}>
         <Form.Control
