@@ -8,7 +8,7 @@ import { BsSearch } from 'react-icons/bs';
 import Row from  'react-bootstrap/Row'
 import Col from  'react-bootstrap/Col'
 import { Container } from 'react-bootstrap';
-
+import { Link } from "react-router-dom";
 
 
 
@@ -39,20 +39,25 @@ const Main = () => {
         </Button>
       </InputGroup>
     
+    
       <Row >
      
         {car.filter((item)=>{
-            return search.toLowerCase() ==="" ? item : item.make_id.toLowerCase().includes(search)
+            return search.toLowerCase() === "" ? item : item.make_id.toLowerCase().includes(search)
         }).map((item)=>(
+
             <Cards 
             maker= {item.make_id}
             model = {item.model}
             year = {item.year}
             image = {item.image}
+            info = {item.description}
+            id = {item.id}
             />
+
         ))}
-        
-    </Row>
+      
+    </Row> 
     </Container>
   )
 }

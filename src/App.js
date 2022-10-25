@@ -1,13 +1,12 @@
 import Main from "./Main.js"
 import { BrowserRouter as Router,Routes,Route } from "react-router-dom";
-import CardInfo from "./CardInfo.js";
-
+import Car from "./Car.js"
 function App() {
   return (
     <Router>
     <Routes>
     <Route path="/" element={<Main />}/> 
-    <Route path="/car/:id" element={<CardInfo />}/> 
+    <Route path="/cars/:id" element={<Car/>} />
     </Routes>
   </Router>
   );

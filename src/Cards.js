@@ -20,12 +20,13 @@ const Cards = (props) => {
           Some quick example text to build on the card title and make up the
           bulk of the card's content.
         </Card.Text>
-        <Link className="rdm-btn" to={`/car/${props.id}`}> <button>Read more</button></Link>
+        <Link to={`/cars/${props.id}`}> <button>Read more</button></Link>
       </Card.Body>
     </Card>
 
     </Col>
-
+              
+               
   )
 }
 
