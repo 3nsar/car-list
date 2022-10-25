@@ -4,4 +4,14 @@
   box-sizing: border-box;
 }
 
+.car-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 120px;
+}
 
+.car-container p{
+  margin:0 1rem 0 1rem;
+}

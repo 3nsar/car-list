@@ -12,7 +12,7 @@ const Cards = (props) => {
     </div> */
 
     <Col >
-    <Card style={{ width: '18rem' }}>
+    <Card style={{ width: '18rem' }} className="mb-5">
       <Card.Img variant="top" src={props.image} height="200px" />
       <Card.Body>
         <Card.Title>{props.maker} {props.model}</Card.Title>

@@ -16,7 +16,7 @@ const Car = () => {
     
 
   return (
-    <div>
+    <div className='car-container'>
         <p>{singleCar.description}</p>
         <Link to={`/`} >Go back</Link>
     </div>
