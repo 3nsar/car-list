@@ -1,6 +1,7 @@
 import React from 'react'
 import { Col } from 'react-bootstrap';
 import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
 import { Link } from "react-router-dom";
 
 const Cards = (props) => {
@@ -20,7 +21,7 @@ const Cards = (props) => {
           Some quick example text to build on the card title and make up the
           bulk of the card's content.
         </Card.Text>
-        <Link to={`/cars/${props.id}`}> <button>Read more</button></Link>
+        <Link to={`/cars/${props.id}`}> <Button>Read more</Button></Link>
       </Card.Body>
     </Card>
 
