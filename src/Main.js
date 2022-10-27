@@ -13,13 +13,14 @@ import Pagination from './Pagination.js';
 import SearchBar from './SearchBar.js';
 
 
-
 const url= "https://example-data.draftbit.com/cars?_limit=50"
 
 const Main = () => {
     const [car, setCar] = useState([])
     const [currentPage, setCurrentPage] = useState(1);
     const [postsPerPage] = useState(10);
+    const [search, setSearch] = useState("")
+
 
     useEffect(()=>{
         axios.get(url).then((response)=>{
@@ -34,18 +35,20 @@ const Main = () => {
   
     // Change page
     const paginate = pageNumber => setCurrentPage(pageNumber);
+
   return (
     <Container>
-        <Row>
-            <SearchBar/>
+        <Row> 
+
             <Cards car={currentPosts}/>
             <Pagination
                postsPerPage={postsPerPage}
                totalPosts={car.length}
                paginate={paginate}
-      />
+            />
         </Row>
-        </Container>
+
+    </Container>
   )
 }
 
