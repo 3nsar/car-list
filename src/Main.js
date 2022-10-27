@@ -10,6 +10,7 @@ import Col from  'react-bootstrap/Col'
 import { Container } from 'react-bootstrap';
 import { Link } from "react-router-dom";
 import Pagination from './Pagination.js';
+import SearchBar from './SearchBar.js';
 
 
 
@@ -17,7 +18,6 @@ const url= "https://example-data.draftbit.com/cars?_limit=50"
 
 const Main = () => {
     const [car, setCar] = useState([])
-    const [search, setSearch] = useState("")
     const [currentPage, setCurrentPage] = useState(1);
     const [postsPerPage] = useState(10);
 
@@ -37,6 +37,7 @@ const Main = () => {
   return (
     <Container>
         <Row>
+            <SearchBar/>
             <Cards car={currentPosts}/>
             <Pagination
                postsPerPage={postsPerPage}
