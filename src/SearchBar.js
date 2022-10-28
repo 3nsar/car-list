@@ -23,6 +23,9 @@ const SearchBar = ({car}) => {
         </Button>
       </InputGroup>
 
+      {car.filter((item)=>{
+       return search.toLowerCase() === "" ? item : item.make_id.toLowerCase().includes(search) 
+      })}
     </Container>
   )
 }

@@ -22,7 +22,7 @@ const Cards = ({car}) => {
         <h1>{props.year}</h1>
     </div> */
 
-    <Col >
+    <Col>
     <InputGroup size="lg" className="mb-3 mt-3 w-75" onChange={(e) => setSearch(e.target.value)}>
         <Form.Control
           placeholder="Recipient's username"
@@ -38,6 +38,7 @@ const Cards = ({car}) => {
     {car.filter((item)=>{
        return search.toLowerCase() === "" ? item : item.make_id.toLowerCase().includes(search) 
     }).map((item)=>(
+    
     <Card  style={{ width: '18rem' }} className="mb-5" key={item.id} >
       <Card.Img variant="top" src={item.image} height="200px" />
       <Card.Body>
@@ -50,9 +51,8 @@ const Cards = ({car}) => {
       </Card.Body>
     </Card>
         ))}
-    </Col>
-
-               
+    </Col>  
+   
   )
 }
 

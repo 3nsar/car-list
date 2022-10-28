@@ -38,16 +38,15 @@ const Main = () => {
 
   return (
     <Container>
-        <Row> 
-
+            {/*<SearchBar/> */}
+        <Row>
             <Cards car={currentPosts}/>
             <Pagination
                postsPerPage={postsPerPage}
                totalPosts={car.length}
                paginate={paginate}
             />
-        </Row>
-
+         </Row>
     </Container>
   )
 }
