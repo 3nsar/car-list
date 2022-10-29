@@ -23,11 +23,13 @@ const Main = () => {
 
 
     useEffect(()=>{
-        axios.get(url).then((response)=>{
-            setCar(response.data)
-            console.log(response.data)
-        })
-    }, [])
+      const fetchPosts = async () =>{
+      const res = await axios.get(url);
+          setCar(res.data)
+          console.log(res.data)
+      }
+      fetchPosts()
+  }, [])
 
     const indexOfLastPost = currentPage * postsPerPage;
     const indexOfFirstPost = indexOfLastPost - postsPerPage;

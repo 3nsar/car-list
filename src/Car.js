@@ -7,12 +7,14 @@ const Car = () => {
     const url = `https://example-data.draftbit.com/cars/${id}`
     const[singleCar, setSingleCar] = useState([])
 
-    useEffect(() =>{ 
-        axios.get(url).then((response) => {
-            setSingleCar(response.data)
-            console.log((response.data))
-        })
-    }, []); 
+    useEffect(()=>{
+      const fetchPosts = async () =>{
+      const res = await axios.get(url);
+          setSingleCar(res.data)
+          console.log(res.data)
+      }
+      fetchPosts()
+  }, [])
     
 
   return (
