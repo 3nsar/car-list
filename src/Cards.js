@@ -39,11 +39,11 @@ const Cards = ({car}) => {
        return search.toLowerCase() === "" ? item : item.make_id.toLowerCase().includes(search) 
     }).map((item)=>(
     
-    <Card  style={{ width: '18rem' }} className="mb-5" key={item.id} >
+    <Card  style={{ width: '18rem' }} className="mb-5 bg-info" key={item.id} >
       <Card.Img variant="top" src={item.image} height="200px" />
       <Card.Body>
         <Card.Title>{item.make_id} {item.model}</Card.Title>
-        <Card.Text>
+        <Card.Text className="text-white">
           Some quick example text to build on the card title and make up the
           bulk of the card's content.
         </Card.Text>
