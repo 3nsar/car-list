@@ -11,6 +11,7 @@ import { Container } from 'react-bootstrap';
 import { Link } from "react-router-dom";
 import Pagination from './Pagination.js';
 import SearchBar from './SearchBar.js';
+import Navbar from './Navbar.js';
 
 
 const url= "https://example-data.draftbit.com/cars?_limit=50"
@@ -41,6 +42,7 @@ const Main = () => {
   return (
     <Container>
             {/*<SearchBar/> */}
+            <Navbar/>
         <Row>
             <Cards car={currentPosts}/>
             <Pagination
