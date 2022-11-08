@@ -9,11 +9,14 @@ import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 import { BsSearch } from 'react-icons/bs';
 import { Container } from 'react-bootstrap';
-
-
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from 'react-toastify';
 
 
 const Cards = ({car}) => {
+
+  const notify = () => toast.success("Added to list",{position: "bottom-left", autoClose: 2000})
+
   const [search, setSearch] = useState("")
   return (
     /*<div>
@@ -21,6 +24,7 @@ const Cards = ({car}) => {
         <h1>{props.model}</h1>
         <h1>{props.year}</h1>
     </div> */
+    
 
     <Col>
     <InputGroup size="lg" className="mb-3 mt-3 w-75" onChange={(e) => setSearch(e.target.value)}>
@@ -47,10 +51,13 @@ const Cards = ({car}) => {
           Some quick example text to build on the card title and make up the
           bulk of the card's content.
         </Card.Text>
+        <Button onClick={notify}>Add</Button>
         <Link to={`/cars/${item.id}`}> <Button>Read more</Button></Link>
       </Card.Body>
     </Card>
+    
         ))}
+      <ToastContainer/>
     </Col>  
    
   )
