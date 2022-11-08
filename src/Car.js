@@ -1,7 +1,8 @@
 import React,  { useState, useEffect } from 'react'
 import axios from 'axios';
 import { useParams, Link } from 'react-router-dom'
-
+import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
 const Car = () => {
     const {id} = useParams()
     const url = `https://example-data.draftbit.com/cars/${id}`
@@ -19,8 +20,11 @@ const Car = () => {
 
   return (
     <div className='car-container'>
+      <Card style={{ width: '18rem' }}>
+      <Card.Img variant="top" src={singleCar.image} height="200px" />
         <p>{singleCar.description}</p>
-        <Link to={`/`} >Go back</Link>
+      </Card>
+      <Link to={`/`} className="back-btn">Go back</Link>
     </div>
   )
 }
