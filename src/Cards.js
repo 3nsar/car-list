@@ -18,6 +18,7 @@ const Cards = ({car}) => {
   const notify = () => toast.success("Added to list",{position: "bottom-left", autoClose: 2000})
 
   const [search, setSearch] = useState("")
+
   return (
     /*<div>
         <h1>{props.maker}</h1>
@@ -25,7 +26,6 @@ const Cards = ({car}) => {
         <h1>{props.year}</h1>
     </div> */
     
-
     <Col>
     <InputGroup size="lg" className="mb-3 mt-3 w-75" onChange={(e) => setSearch(e.target.value)}>
         <Form.Control
@@ -51,7 +51,7 @@ const Cards = ({car}) => {
           Some quick example text to build on the card title and make up the
           bulk of the card's content.
         </Card.Text>
-        <Button onClick={notify}>Add</Button>
+        <Button onClick={notify} >Add</Button>
         <Link to={`/cars/${item.id}`}> <Button>Read more</Button></Link>
       </Card.Body>
     </Card>

@@ -12,7 +12,6 @@ const Header = () => {
           <Navbar.Brand >Cars</Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link ><Link to="/">Home</Link></Nav.Link>
-            <Nav.Link ><Link to="/shoppinglist"><FiShoppingCart/></Link></Nav.Link>
           </Nav>
         </Container>
       </Navbar>
