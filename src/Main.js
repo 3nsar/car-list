@@ -22,14 +22,14 @@ const Main = () => {
     const [search, setSearch] = useState("")
 
 
-    useEffect(()=>{
+   useEffect(()=>{
       const fetchPosts = async () =>{
       const res = await axios.get(url);
           setCar(res.data)
           console.log(res.data)
       }
       fetchPosts()
-  }, [])
+  }, []) 
 
     const indexOfLastPost = currentPage * postsPerPage;
     const indexOfFirstPost = indexOfLastPost - postsPerPage;
